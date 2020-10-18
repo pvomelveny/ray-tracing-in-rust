@@ -1,6 +1,7 @@
 use crate::vec3::{Point3, Vec3};
 
-struct Ray {
+#[derive(Debug, Copy, Clone, PartialEq)]
+pub struct Ray {
     origin: Point3,
     direction: Vec3,
 }
