@@ -32,7 +32,7 @@ impl Vec3 {
     }
 
     pub fn length_squared(self) -> f64 {
-        (self.x * self.x) + (self.y * self.y) + (self.z * self.z)
+        Vec3::dot(self, self)
     }
 
     pub fn length(self) -> f64 {
@@ -156,7 +156,7 @@ impl Div<i64> for Vec3 {
     type Output = Self;
 
     fn div(self, s: i64) -> Self {
-        (1 / s) * self
+        (1.0 / s as f64) * self
     }
 }
 // Negative

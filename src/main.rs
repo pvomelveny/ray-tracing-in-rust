@@ -49,7 +49,7 @@ fn render_ppm() {
 }
 
 fn ray_color(ray: Ray) -> Color {
-    if hit_sphere(Point3::new(0, 0, -1), 0.5, ray) {
+    if hit_sphere(Point3::new(0., 0., -1.), 0.5, ray) {
         return Color::new(1, 0, 0);
     }
 
